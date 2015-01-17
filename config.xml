@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.dinesh.cgemp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>CGEmp</name>
+    <description>
+        A Simple Employee Management app using Cordova.
+    </description>
+    <author email="dineshkumar.r@cgvakindia.com" href="http://cordova.io">
+        Dinesh Raja
+    </author>
+    <!--3rd Party Plugins-->
+    <gap:plugin name="com.brodysoft.sqliteplugin" version="1.0.0" />
+    <content src="index.html" />
+    <access origin="*" />
+</widget>

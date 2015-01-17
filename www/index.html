@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />        
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css"> 
+        <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script> 
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="js/cgemp.js"></script>
+        <title>CGEmp</title>
+    </head>
+    <body>
+        <section data-role="page" id="homePage">
+            <header data-role="header" data-position="fixed" data-theme="b">
+                <a href="#addPage" data-role="button" data-icon="plus" id="vapbtn" data-iconpos="notext" data-transition="flip">Add Page</a>
+                <h1>Employees List</h1>
+            </header>
+            <article data-role="main">
+                <ul id="emplist" data-role="listview"></ul>
+            </article>
+            <footer data-role="footer" data-position="fixed" data-theme="b" data-tap-toggle="false">
+                <h1>&copy All Rights Reserved</h1>
+            </footer>
+        </section>
+        <section data-role="page" id="addPage">
+            <header data-role="header" data-position="fixed" data-theme="b">
+            <a href="#" data-role="button" data-rel="back" data-icon="back" data-iconpos="notext">Back</a>
+            <h1>Add Employee</h1>            
+            </header>
+            <article data-role="main">
+                <form id="addingForm">
+               <label for="ename">Employee Name</label>
+               <input type="text" id="ename" /> 
+               <label for="emobile">Mobile</label>
+               <input type="tel" id="emobile" />              
+               <label for="esal">Salary</label>
+               <input type="text" id="esal" />
+               <input type="button" id="savebtn" value="Save" />
+            </form>
+            </article>
+            <footer data-role="footer" data-position="fixed" data-theme="b" data-tap-toggle="false">
+                <h1>&copy All Rights Reserved</h1>
+            </footer>
+        </section>
+        <section data-role="page" id="viewPage">
+            <header data-role="header" data-position="fixed" data-theme="b">
+            <h1>View Profile</h1>
+            </header>            
+            <article data-role="main">          
+            <label for="dname">Name:</label>
+            <input type="text" id="dname" class="editing" value="Dinesh" readonly="true" />            
+            <label for="dsal">Salary:</label>
+            <input type="text" id="dsal" class="editing" value="315" readonly="true" />
+            <label for="dmbl">Mobile</label>    
+            <input type="tel" id="dmbl" class="editing" value="9942734970" readonly="true" />
+            <input type="button" id="editbtn" value="Edit" data-inline="true"/>
+            <input type="button" id="deletebtn" value="Delete" data-inline="true">
+            <input type="button" id="updatebtn" value="Update" >
+            </article>
+        </section>
+        <script type="text/javascript" src="cordova.js"></script>    
+    </body>
+</html>
