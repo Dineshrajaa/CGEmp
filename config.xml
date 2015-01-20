@@ -9,6 +9,8 @@
     </author>
     <!--3rd Party Plugins-->
     <gap:plugin name="com.brodysoft.sqliteplugin" version="1.0.0" />
+    <gap:plugin name="nl.x-services.plugins.toast" version="1.0" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
     <content src="index.html" />
     <access origin="*" />
 </widget>
