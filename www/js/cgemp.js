@@ -7,6 +7,9 @@ $(document).ready(function(){
 		window.plugins.toast.showLongBottom(msg);
 	}
 
+	
+						/**Methods related to Database**/
+	
 	//Method to Initialize DB
 	function dbtInitialize(){
 		if (window.openDatabase) {
@@ -19,7 +22,7 @@ $(document).ready(function(){
 			alert("Sorry You can't Save data");
 		}
 	}
-						/**Methods related to Database**/
+
 	//Method to save Employee Profile
 	function saveProfile(){
 		var pname=$("#ename").val();
@@ -84,7 +87,6 @@ $(document).ready(function(){
 
 	//Method to Read Selected Employee Profile for Editing
 	function editProfile(sid){
-
 		dbName.transaction(function(tx){			
 			tx.executeSql('select * from cgemptable where wId = "'+ sid+ '"', [], updateProfile);
 		});
@@ -101,10 +103,15 @@ $(document).ready(function(){
 		readProfile();
 	});
 	
+		/**InAppBrowser Methods**/
+		function informer(){
+			
+			var officeSite=window.open('http://www.cgvakindia.com/','_blank','location=yes','closebuttoncaption=Ok','toolbarposition=top');
+		}
 	
 		/**Function Calls**/
 
-		//Save Weaver Profile
+	//Save Employee Profile
 	$("#savebtn").tap(saveProfile);
 
 	//Make Elements Editable
@@ -115,12 +122,15 @@ $(document).ready(function(){
 		$(":mobile-pagecontainer").pagecontainer("change","#addPage");
 	});
 
+	//Display InappBrowser
+	$("#infobtn").tap(informer);
+
 	//Display HomePage
 	$(".home").tap(function(){
 		$(":mobile-pagecontainer").pagecontainer("change","#homePage");
 	});
 
-	//Displays the details of the selected Employee to edit	
+	//Displays the details of the selected Employee to View/Edit	
 	$(document).on("tap","#emplist li",function(){
 				editProfile($(this).attr('id'));
 		});
